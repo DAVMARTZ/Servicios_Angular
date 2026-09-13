@@ -1,11 +1,27 @@
-<h2>Lista de personajes de DBZ</h2>
-@for (dbz of animes(); track dbz.id) { <!-- Track sirve para identificar si un objeto fue cambiado y solo ese sera modificado -->
-    <article class="post-card">
-        <h2>{{ dbz.name }}</h2>
-        <h3>{{ dbz.ki }}</h3>
-        <h4>{{ dbz.race }}</h4>
-        <p> {{ dbz.description }} </p>
-    </article>
-} @empty {
-    <p>Cargando</p>
-}
+<section class="dbz-container">
+
+   <article class="title">
+      <h2>Lista de personajes de DBZ (httpClient)</h2>
+   </article>
+
+  <div class="cards-grid">
+    @for (dbz of animes(); track dbz.id) {
+      <article class="post-card">
+        <header class="card-header">
+          <h2>{{ dbz.name }}</h2>
+          <span class="badge">{{ dbz.race }}</span>
+        </header>
+
+        <div class="card-body">
+          <p class="ki-stat"><strong>Ki:</strong> {{ dbz.ki }}</p>
+          <p class="description">{{ dbz.description }}</p>
+        </div>
+      </article>
+    } @empty {
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Cargando personajes...</p>
+      </div>
+    }
+  </div>
+</section>

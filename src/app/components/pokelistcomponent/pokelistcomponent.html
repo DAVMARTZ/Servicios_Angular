@@ -1,0 +1,23 @@
+
+
+<h2>Top 5 Pokémon (Fetch + Async/Await)</h2>
+
+@if (errorMessage) {
+  <div class="error">{{ errorMessage }}</div>
+} @else {
+  <div class="container">
+    @for (pokemon of pokemons; track pokemon.id) { <!--Track permite no destruir elementos ni generarlos nuevamente si ya existen-->
+      <div class="card">
+        <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" />
+        <h3>#{{ pokemon.id }} {{ pokemon.name }}</h3>
+        <p>
+          @for (t of pokemon.types; track t.type.name) {
+            <span class="badge">
+              {{ t.type.name }}
+            </span>
+          }
+        </p>
+      </div>
+    }
+  </div>
+}
