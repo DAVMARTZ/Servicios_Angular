@@ -1,0 +1,25 @@
+<h2>Personajes de Rick and Morty (httpResource (signals))</h2>
+
+@if (resource.isLoading()) {
+  <div class="loading-state">
+    <div class="spinner"></div>
+    <p>Cargando personajes...</p>
+  </div>
+}
+
+@if (resource.error()) {
+  <div class="error">Ocurrió un error al consultar la API.</div>
+}
+
+@if (resource.hasValue()) {
+  <div class="character-container">
+    @for (character of resource.value()!.results; track character.id) {
+      <div class="character-card">
+        <img [src]="character.image" [alt]="character.name" />
+        <h3>{{ character.name }}</h3>
+        <span class="badge">{{ character.status }}</span>
+        <span class="badge">{{ character.species }}</span>
+      </div>
+    }
+  </div>
+}
