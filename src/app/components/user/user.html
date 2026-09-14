@@ -1,0 +1,27 @@
+<div class="container">
+
+  <h1>Lista de usuarios</h1>
+
+  <div class="usuarios">
+
+    @for (usuario of usuarios; track usuario.id) {
+
+      <div class="usuario-card">
+
+        <h2>{{ usuario.firstName }} {{ usuario.lastName }}</h2>
+
+        <p><strong>ID:</strong> {{ usuario.id }}</p>
+
+        <p><strong>Usuario:</strong> {{ usuario.username }}</p>
+
+        <p><strong>Email:</strong> {{ usuario.email }}</p>
+
+        <p><strong>Teléfono:</strong> {{ usuario.phone }}</p>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>
