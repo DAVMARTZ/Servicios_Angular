@@ -1,0 +1,78 @@
+/* Centrar el título h1 */
+h1 {
+  text-align: center;
+  color: #4c1d95; /* Opcional: un morado oscuro que combina con todo */
+  font-family: system-ui, -apple-system, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor principal del formulario */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f6fc; /* Fondo muy sutil con tinte morado */
+  border: 1px solid #e2dbf1;
+  border-radius: 12px;
+  font-family: system-ui, -apple-system, sans-serif;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+}
+
+/* Estilo para los Fieldsets (eliminamos el borde por defecto y ponemos separación) */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas (Labels) */
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4c1d95; /* Morado oscuro elegante */
+  margin-bottom: 0.4rem;
+}
+
+/* Campos de texto (Inputs) */
+input[type="text"] {
+  padding: 0.75rem;
+  border: 1.5px solid #d8b4fe; /* Morado claro / lila */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #1f2937;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efecto cuando el usuario hace clic o escribe en el input */
+input[type="text"]:focus {
+  border-color: #7c3aed; /* Morado vibrante */
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+/* Botón de enviar */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #7c3aed; /* Morado principal */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+/* Efecto hover (cuando pasas el mouse por encima) */
+button:hover {
+  background-color: #6d28d9; /* Morado un poco más oscuro */
+}
+
+/* Efecto al presionar el botón */
+button:active {
+  transform: scale(0.98);
+}

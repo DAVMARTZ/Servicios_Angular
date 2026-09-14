@@ -1,0 +1,20 @@
+<h1>Reactive Form: Películas</h1>
+
+<!--Formulario de prueba-->
+<form [formGroup]="movieForm" (submit)="handleSubmit()">
+  <!-- FieldSet agrupa elementos relacionados de un formulario -->
+  <!-- cada input se relaciona al campo (propiedad) del objeto correspondiente -->
+  <fieldset>
+    <label for="movie-name">Movie name:</label>
+    <input type="text" id="movie-name" formControlName="name" />
+  </fieldset>
+  <fieldset>
+    <label for="movie-name">Movie duration:</label>
+    <input type="text" id="movie-duration" formControlName="duration" />
+  </fieldset>
+  <fieldset>
+    <label for="movie-name">Movie director:</label>
+    <input type="text" id="movie-director" formControlName="director" />
+  </fieldset>
+  <button>Create movie</button>
+</form>

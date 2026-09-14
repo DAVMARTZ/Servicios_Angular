@@ -5,10 +5,11 @@ import { Pokelistcomponent } from './components/pokelistcomponent/pokelistcompon
 import { CharacterList } from './components/character-list/character-list';
 import { CommonModule } from '@angular/common';
 import { UserComponent } from './components/user/user';
+import { FormReactive } from './components/form-reactive/form-reactive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Anime, CommonModule, Pokelistcomponent, CharacterList, UserComponent],
+  imports: [RouterOutlet, Anime, CommonModule, Pokelistcomponent, CharacterList, UserComponent, FormReactive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
